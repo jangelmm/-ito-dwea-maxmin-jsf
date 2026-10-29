@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html">
+<h:head>
+    <title>Evaluar Función</title>
+</h:head>
+<h:body>
+    <h2>Función: f(x) = ax² + bx + c</h2>
+    
+    <h:form>
+        <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; text-align: left;">
+            <tr>
+                <th style="background-color: #f2f2f2;">Títulos</th>
+                <th style="background-color: #f2f2f2;">Campos</th>
+            </tr>
+            <tr>
+                <td>Coeficiente (a)</td>
+                <td><h:inputText value="#{maxmin.a}" required="true" /></td>
+            </tr>
+            <tr>
+                <td>Coeficiente (b)</td>
+                <td><h:inputText value="#{maxmin.b}" required="true" /></td>
+            </tr>
+            <tr>
+                <td>Constante (c)</td>
+                <td><h:inputText value="#{maxmin.c}" required="true" /></td>
+            </tr>
+            <tr>
+                <td>Límite Inicial (x)</td>
+                <td><h:inputText value="#{maxmin.limiteInicial}" required="true" /></td>
+            </tr>
+            <tr>
+                <td>Límite Final (x)</td>
+                <td><h:inputText value="#{maxmin.limiteFinal}" required="true" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <h:commandButton value="Calcular Extremos" action="#{maxmin.calcular}" />
+                </td>
+            </tr>
+        </table>
+    </h:form>
+</h:body>
+</html>

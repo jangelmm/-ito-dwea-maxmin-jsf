@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html">
+<h:head>
+    <title>Resultados de la Función</title>
+</h:head>
+<h:body>
+    <h2>Extremos de la Función</h2>
+    
+    <h:form>
+        <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; text-align: left; width: 300px;">
+            <tr>
+                <th colspan="2" style="background-color: #e6f7ff; text-align: center;">Valores de (y) en el rango</th>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">Máximo de la función:</td>
+                <td style="color: green; font-weight: bold; text-align: center;">
+                    <h:outputText value="#{maxmin.maximo}" />
+                </td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">Mínimo de la función:</td>
+                <td style="color: blue; font-weight: bold; text-align: center;">
+                    <h:outputText value="#{maxmin.minimo}" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <h:commandButton value="Evaluar otra función" action="#{maxmin.reiniciar}" />
+                </td>
+            </tr>
+        </table>
+    </h:form>
+</h:body>
+</html>
